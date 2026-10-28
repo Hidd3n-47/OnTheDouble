@@ -106,8 +106,6 @@ public class PlayerController : MonoBehaviour
         {
             forklift.Engine.Power = Math.Max(forklift.Engine.Power,
                 0.0f);
-
-            //horizontalInput *= -1.0f;
         }
 
         forklift.Engine.Resistance = engineFrictionCurve.Evaluate(EnginePowerRatio);
