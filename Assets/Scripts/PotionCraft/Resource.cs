@@ -31,7 +31,7 @@ public class Resource : MonoBehaviour
         // Could test for layer etc, but currently no other rigids but player so no point. 
         GetComponent<SphereCollider>().enabled = false;
 
-        PlayerController player = col.gameObject.GetComponent<PlayerController>();
+        PlayerController player = col.gameObject.GetComponentInParent<PlayerController>();
 
         m_resourceType--;
 
