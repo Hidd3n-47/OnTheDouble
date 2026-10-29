@@ -8,16 +8,19 @@ using System.Collections;
 class Resource : MonoBehaviour
 {
     [SerializeField]
-    ResourceType m_resource;
+    ResourceType m_resourceType;
 
     [SerializeField] AnimationCurve m_animCurve;
 
     string m_name;
 
+    // Responsibility of Spawner
     public void Initialise(ResourceType ingredient)
     {
-        (GetComponent<MeshFilter>()).sharedMesh = m_resource.mesh;
-        m_name = m_resource.Name;
+        (GetComponent<MeshFilter>()).sharedMesh = m_resourceType.mesh;
+        m_name = m_resourceType.Name;
+
+        m_resourceType++;
     }
 
 
@@ -27,9 +30,11 @@ class Resource : MonoBehaviour
         GetComponent<SphereCollider>().enabled = false;
 
         PlayerController player = col.gameObject.GetComponent<PlayerController>();
-        
+
+        m_resourceType--;
+
         // TODO
-        //StartCoroutine(SeekToCauldron(player.GetCauldronTransform()));
+        StartCoroutine(SeekToCauldron(player.GetCauldronTransform()));
         //Inventory.AddResource(m_resource);
     }
 

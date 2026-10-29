@@ -1,8 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "Scriptable Objects/Recipe")]
 public class Recipe : ScriptableObject
 {
+
     [SerializeField]
     string m_name;
 
@@ -13,5 +15,7 @@ public class Recipe : ScriptableObject
     IPotion m_outputPotion;
 
     public string Name => m_name;
-    public Element[] Elements => m_elements; 
+    public Element[] Elements => m_elements;
+
+
 }
