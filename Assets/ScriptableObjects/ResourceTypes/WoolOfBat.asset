@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: Wool of Bat
   m_elements: 0400000001000000
-  m_mesh: {fileID: 0}
+  m_mesh: {fileID: 7577752148970125422, guid: f9d1afc66ad6d5f49b36ca5fa26b3b78, type: 3}
