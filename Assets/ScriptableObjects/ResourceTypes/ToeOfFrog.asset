@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: 'Toe of Frog '
   m_elements: 0300000004000000
-  m_mesh: {fileID: -6423368296694795729, guid: 721949b5f43c4234087bb574a9cfc82f, type: 3}
+  m_mesh: {fileID: 0}
