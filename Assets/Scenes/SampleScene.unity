@@ -172,6 +172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11443446, guid: cc8eb93690a63be449a406207cbc120d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443446, guid: cc8eb93690a63be449a406207cbc120d, type: 3}
       propertyPath: centerOfMass
       value: 
       objectReference: {fileID: 0}
@@ -1732,6 +1736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6573569132963983147, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
+    - {fileID: 4374567064717254501, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8019444394890838281, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
