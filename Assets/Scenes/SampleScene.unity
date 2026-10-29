@@ -776,6 +776,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447230948}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &629947507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1787060147306805915, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
+  m_PrefabInstance: {fileID: 2114202536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733660673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1562,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330585546}
     - target: {fileID: 4954910937778781620, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
+      propertyPath: visualModel
+      value: 
+      objectReference: {fileID: 629947507}
+    - target: {fileID: 4954910937778781620, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
       propertyPath: wheelsPowerCurve
       value: 300
       objectReference: {fileID: 0}
@@ -1611,18 +1620,6 @@ PrefabInstance:
     - target: {fileID: 7118712905449509598, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 8019444394890838281, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8019444394890838281, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8019444394890838281, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8019444394890838281, guid: c1b1be6fd04ace648af557686a614b1d, type: 3}
       propertyPath: m_LocalPosition.x

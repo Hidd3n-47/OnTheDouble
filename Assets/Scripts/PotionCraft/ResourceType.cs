@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ResourceType", menuName = "Scriptable Objects/ResourceType")]
 public class ResourceType : ScriptableObject
 {
-    static int spawnCount = 0;
+    int spawnCount = 0;
 
     [SerializeField]
     string m_name;
@@ -29,8 +28,7 @@ public class ResourceType : ScriptableObject
         return !(a == b);
     }
 
-
-
-    public static ResourceType operator --(ResourceType id) {spawnCount--; return null;}
-    public static ResourceType operator ++(ResourceType id) {spawnCount++; return null; }
+    public int Count => spawnCount;
+    public static ResourceType operator --(ResourceType id) { id.spawnCount--; return null; }
+    public static ResourceType operator ++(ResourceType id) { id.spawnCount++; return null; }
 }

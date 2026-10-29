@@ -7,7 +7,6 @@ using System.Collections;
 [RequireComponent (typeof(SphereCollider))]
 class Resource : MonoBehaviour
 {
-    [SerializeField]
     ResourceType m_resourceType;
 
     [SerializeField] AnimationCurve m_animCurve;
@@ -17,6 +16,9 @@ class Resource : MonoBehaviour
     // Responsibility of Spawner
     public void Initialise(ResourceType ingredient)
     {
+        transform.localPosition = Vector3.zero;
+
+        m_resourceType = ingredient;
         (GetComponent<MeshFilter>()).sharedMesh = m_resourceType.mesh;
         m_name = m_resourceType.Name;
 
