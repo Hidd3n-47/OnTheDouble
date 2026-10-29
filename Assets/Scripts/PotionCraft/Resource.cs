@@ -29,7 +29,7 @@ class Resource : MonoBehaviour
         PlayerController player = col.gameObject.GetComponent<PlayerController>();
         
         // TODO
-        //StartCoroutine(SeekToCauldron(player.GetCauldronTransform()));
+        StartCoroutine(SeekToCauldron(player.GetCauldronTransform()));
         //Inventory.AddResource(m_resource);
     }
 
