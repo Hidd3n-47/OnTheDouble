@@ -4,11 +4,14 @@ using UnityEngine;
 public class Recipe : ScriptableObject
 {
     [SerializeField]
-    string Name;
+    string m_name;
 
     [SerializeField]
-    Base[] m_bases = new Base[3];
+    Element[] m_elements = new Element[3];
 
     [SerializeField]
-    IPotion OutputPotion;    
+    IPotion m_outputPotion;
+
+    public string Name => m_name;
+    public Element[] Elements => m_elements; 
 }

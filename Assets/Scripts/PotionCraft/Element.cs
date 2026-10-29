@@ -1,4 +1,4 @@
-public enum Base
+public enum Element
 {
     Ignis = 0, 
     Ether,
