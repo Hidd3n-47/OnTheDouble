@@ -38,6 +38,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Forklift    forklift;
     [SerializeField] private OptionsMenu optionsMenu;
 
+    [SerializeField] private Transform   cauldron;
+
+    public Transform GetCauldronTransform()
+    {
+        return cauldron;
+    }
+
     public bool IsBoosting => forklift.IsBoosting;
     public float EnginePower => forklift.Engine.Power;
     public float EnginePowerRatio => Mathf.Abs(forklift.Engine.Power) / enginePowerMaxCurve.Evaluate(engineMaxPowerSpring.position);
