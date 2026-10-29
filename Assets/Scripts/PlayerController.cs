@@ -27,6 +27,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The amount of friction the wheels experience based off engine power ratio. (i.e. max speed = 1)")]
     [SerializeField] private float wheelsFrictionCurve = 125.0f;
 
+    public Transform visualModel;
+    public float maxLeanAngle = 30f;
+    public float leanSpeed = 5f;
+
+    private float currentLean = 0f;
+
+    [SerializeField] private AnimationCurve horizontalInputScaling;
+
     [SerializeField] private Forklift    forklift;
     [SerializeField] private OptionsMenu optionsMenu;
 
@@ -35,8 +43,24 @@ public class PlayerController : MonoBehaviour
     public float EnginePowerRatio => Mathf.Abs(forklift.Engine.Power) / enginePowerMaxCurve.Evaluate(engineMaxPowerSpring.position);
     public float EngineWheelRatio => Mathf.Abs(forklift.Wheels.Power) / wheelsPowerMaxCurve;
 
+    public Transform camera;
+
+    private Vector3 offset;
+
+    private void Start()
+    {
+        offset = camera.position - transform.position;
+    }
+
+
+    private void Update()
+    {
+        camera.position = transform.position + offset;
+    }
     private void FixedUpdate()
     {
+
+        
         // Input.
         float acceleration    = Gamepad.current?.rightTrigger.ReadValue() ?? 0.0f;
         float brake           = Gamepad.current?.leftTrigger.ReadValue()  ?? 0.0f;
@@ -44,6 +68,9 @@ public class PlayerController : MonoBehaviour
         forklift.BrakingThisFrame      = brake != 0.0f;
 
         float horizontalInput = (float)Math.Round(Gamepad.current?.leftStick.value.x ?? 0, 2);
+        float targetLean = horizontalInput * maxLeanAngle;
+        currentLean = Mathf.Lerp(currentLean, targetLean, Time.deltaTime * leanSpeed);
+        visualModel.localRotation = Quaternion.Euler(0f, 0f, -currentLean);
 
         // Engine Power.
         float engineInput = acceleration - brake;
@@ -109,27 +136,31 @@ public class PlayerController : MonoBehaviour
         }
 
         forklift.Engine.Resistance = engineFrictionCurve.Evaluate(EnginePowerRatio);
-        forklift.Wheels.Resistance = wheelsFrictionCurve;
+
+        float horizontalScale = horizontalInputScaling.Evaluate(Mathf.Abs(horizontalInput));
 
         // Turning Power.
         if (horizontalInput > 0.0f)
         {
             float counterSteerMultiplier = forklift.Wheels.Power < 0.0f ? 2.0f : 1.0f;
-            forklift.Wheels.Power += wheelsPowerCurve * counterSteerMultiplier;
+            forklift.Wheels.Power += wheelsPowerCurve * counterSteerMultiplier * horizontalScale;
             //todo this max should be inside the forklift get and set property.
-            forklift.Wheels.Power = Math.Min(forklift.Wheels.Power, wheelsPowerMaxCurve);
+            forklift.Wheels.Power = Math.Min(forklift.Wheels.Power, wheelsPowerMaxCurve * horizontalScale);
         }
         else if (horizontalInput < 0.0f)
         {
             float counterSteerMultiplier = forklift.Wheels.Power > 0.0f ?  2.0f : 1.0f;
 
-            forklift.Wheels.Power -= wheelsPowerCurve * counterSteerMultiplier;
+            forklift.Wheels.Power -= wheelsPowerCurve * counterSteerMultiplier * horizontalScale;
             //todo this max should be inside the forklift get and set property.
-            forklift.Wheels.Power = Math.Max(forklift.Wheels.Power, -wheelsPowerMaxCurve);
+            forklift.Wheels.Power = Math.Max(forklift.Wheels.Power, -wheelsPowerMaxCurve * horizontalScale);
         }
         else
         {
+            forklift.Wheels.Resistance = wheelsFrictionCurve;
             forklift.Wheels.Resistance *= 5.0f;
+
+
         }
     }
 }
