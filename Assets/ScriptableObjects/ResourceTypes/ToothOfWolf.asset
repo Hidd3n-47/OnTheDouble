@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: Tooth of Wolf
   m_elements: 0000000004000000
-  m_mesh: {fileID: -8259517859578987223, guid: 95e52cdee0a79e944b784135cf35940c, type: 3}
+  m_mesh: {fileID: 0}
