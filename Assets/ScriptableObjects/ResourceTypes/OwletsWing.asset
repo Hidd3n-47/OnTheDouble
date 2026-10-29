@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: 
   m_elements: 0100000002000000
-  m_mesh: {fileID: 0}
+  m_mesh: {fileID: -4712241657932502973, guid: b1e9be037df47bc49a147ba9c2c29b8c, type: 3}
