@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent (typeof(MeshFilter))]
 [RequireComponent (typeof(MeshRenderer))]
 [RequireComponent (typeof(SphereCollider))]
-class Resource : MonoBehaviour
+public class Resource : MonoBehaviour
 {
     ResourceType m_resourceType;
 
@@ -80,5 +80,7 @@ class Resource : MonoBehaviour
         // Remove
         Destroy(gameObject, 0.01f);
     }
+
+    public ResourceType Type => m_resourceType;
     
 }
