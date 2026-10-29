@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
 
     public Transform camera;
 
+    public GameObject ParticleLeft;
+    public GameObject ParticleRight;
+    public float leanThreashold = 20.0f;
+
     private Vector3 offset;
 
     private void Start()
@@ -63,6 +67,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         camera.position = transform.position + offset;
+
+        ParticleLeft.SetActive(currentLean >= leanThreashold);
+        ParticleRight.SetActive(currentLean <= -leanThreashold);
     }
     private void FixedUpdate()
     {
