@@ -749,6 +749,8 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 64
+  leftPotionWheel: {fileID: 11400000, guid: c697803903c9b82449b2e98392405dd4, type: 2}
+  rightPotionWheel: {fileID: 11400000, guid: 17f6026cb8965c94e8ebff9fd78bea6d, type: 2}
   camera: {fileID: 0}
   ParticleLeft: {fileID: 6739828437565177441}
   ParticleRight: {fileID: 5535115454277905299}
