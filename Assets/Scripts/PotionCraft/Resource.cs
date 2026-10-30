@@ -32,6 +32,7 @@ public class Resource : MonoBehaviour
         GetComponent<SphereCollider>().enabled = false;
 
         PlayerController player = col.gameObject.GetComponentInParent<PlayerController>();
+        player.AddResource(m_resourceType);
 
         m_resourceType--;
 

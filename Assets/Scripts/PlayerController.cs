@@ -40,9 +40,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Transform   cauldron;
 
+    private Inventory inventory;
+
     public Transform GetCauldronTransform()
     {
         return cauldron;
+    }
+
+    public void AddResource(ResourceType resource)
+    {
+        inventory.AddResource(resource);
     }
 
     public bool IsBoosting => forklift.IsBoosting;
@@ -61,6 +68,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         offset = camera.position - transform.position;
+
+        inventory = GetComponent<Inventory>();
     }
 
 
