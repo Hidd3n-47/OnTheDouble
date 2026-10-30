@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -15,22 +16,28 @@ public class ResourceTest : MonoBehaviour
 
     void Start()
     {
-        TestInventorySystem();
+        StartCoroutine(TestInventorySystem());
         //TestCombosFromResources();
     }
 
-    void TestInventorySystem()
+    IEnumerator TestInventorySystem()
     {
         Log.Msg("Testing Inventory!");
 
-        for (int i = 0; i < 100; ++i)
+        for (int i = 0; i < 8; ++i)
         {
-            inv.AddResource(r[Random.Range(0, r.Length)]);
+            //inv.AddResource(r[Random.Range(0, r.Length)]);
+            inv.AddResource(r[i]);
         }
 
-        for (int i = 0; i < 90; ++i)
+        for (int i = 7; i >= 0; i-=2)
         {
+            //inv.UseIngredient(r[Random.Range(0, r.Length)]);
+            inv.UseIngredient(r[i]);
+            yield return new WaitForSeconds(1);
             inv.UseIngredient(r[Random.Range(0, r.Length)]);
+//            inv.UseIngredient(r[i-1]);
+            yield return new WaitForSeconds(4);
         }
     }
 

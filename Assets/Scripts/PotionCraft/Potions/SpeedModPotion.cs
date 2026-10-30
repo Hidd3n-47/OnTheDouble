@@ -15,10 +15,12 @@ public class SpeedModPotion : GenericPotion
         if(m_ability == PotionAbility.Speed)
         {
             // Speed Up Player
+            target.GetComponent<Forklift>()?.ModSpeed(1.5f);
         }
         else // Slow
         {
             // Slow Player
+            target.GetComponent<Forklift>()?.ModSpeed(0.75f);
         }
     }
 }

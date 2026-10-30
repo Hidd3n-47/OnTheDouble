@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // This is effectively a factory class. 
 public class Cauldron : MonoBehaviour
 {
     const int k_ingredientQuantity = 4;
+
+    [SerializeField] ParticleSystem m_cauldromSmoke;
 
     [SerializeField]
     Recipe[] m_recipes = new Recipe[0];
@@ -57,9 +60,13 @@ public class Cauldron : MonoBehaviour
                 for (int j = 0; j < 2; ++j)
                 {
                     m_addedElements[i+j] = ingredient.Elements[j];
-                    m_elementOrbs[i+j].material.SetColor("_BaseColor", ElementUtils.ElementToColour(ingredient.Elements[j]));
+
+                    Color c = ElementUtils.ElementToColour(ingredient.Elements[j]);
+                    m_elementOrbs[i+j].material.SetColor("_EmissionColor", c * 255);
                     m_elementOrbs[i+j].gameObject.SetActive(true);
                 }
+                SpawnSmoke(Color.Lerp(ElementUtils.ElementToColour(ingredient.Elements[0]), ElementUtils.ElementToColour(ingredient.Elements[1]), 0.5f), 10);
+
                 i += 2;
                 break;
             }
@@ -102,20 +109,61 @@ public class Cauldron : MonoBehaviour
                 Log.Msg("Brews: " + recipe.Name);
                 if (m_potions.ContainsKey(recipe.ID))
                 {
-                    m_inventory.AddPotion(m_potions[recipe.ID]);
+                    StartCoroutine(BrewPotion(m_potions[recipe.ID]));
                     break;
                 }
+
+                StartCoroutine(BrewPotion(new GenericPotion(recipe)));
                 // Need to add new ones for each generic to avoid renaming potions!
-                m_inventory.AddPotion(new GenericPotion(recipe));
+                
                 break;
             }
         }
 
         if(!brewed)
         {
+            SpawnSmoke(Color.darkGray, 15);
+            ResetIngredients();
             Log.Msg("Brewing Failed: " + new Combo(m_addedElements).ToString());
         }
+    }
 
+    IEnumerator BrewPotion(IPotion potion)
+    {
+
+        Color[] cols = new Color[3];
+        for (int i = 0; i < 3; ++i)
+        {
+            cols[i] = ElementUtils.ElementToColour(m_addedElements[i]);
+        }
+        Color smokeCol = (cols[0] + cols[1] + cols[2])/3;
+
+        ResetIngredients();
+
+        float timer = 1;
+        while ((timer -= Time.deltaTime) > 0)
+        {
+            SpawnSmoke(smokeCol, 2);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        SpawnSmoke(smokeCol, 10);
+        m_inventory.AddPotion(potion);
+
+
+    }
+
+    void SpawnSmoke(Color col, int count)
+    {
+        var param = m_cauldromSmoke.main;
+        param.startColor = col;
+
+
+        m_cauldromSmoke.Emit(count);
+    }
+
+    void ResetIngredients()
+    {
         for (int i = 0; i < k_ingredientQuantity; ++i)
         {
             m_addedElements[i] = Element.Max;
