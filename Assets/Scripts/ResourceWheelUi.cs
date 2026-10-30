@@ -38,6 +38,8 @@ public class ResourceWheelUi : MonoBehaviour
             var b = a.GetChild(0).GetComponent<Image>();
             var c = _resources.resources[i].image;
             b.sprite = c;
+
+
         }
 
         Deactivate();
