@@ -16,7 +16,7 @@ public class IngredientSpawner : MonoBehaviour
     private float _timer;
 
     public IEnumerable<Transform> PossibleSpawnPoints => _spawnPoints.Where(t => t.childCount == 0);
-    public int SpawnedCount => _spawnPoints.Where(t => t.childCount >= 0).Count();
+    public int SpawnedCount => _spawnPoints.Where(t => t.childCount > 0).Count();
 
     private void Start()
     {
