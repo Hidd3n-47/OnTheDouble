@@ -31,4 +31,9 @@ public class ResourceType : ScriptableObject
     public int Count => spawnCount;
     public static ResourceType operator --(ResourceType id) { id.spawnCount--; return id; }
     public static ResourceType operator ++(ResourceType id) { id.spawnCount++; return id; }
+
+    public override string ToString()
+    {
+        return m_name;
+    }
 }

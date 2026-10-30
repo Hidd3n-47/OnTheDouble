@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e79c2edd61b8740191f4a6c1122a2a8, type: 3}
-  m_Name: LizardsLeg
+  m_Name: ScaleOfMole
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
-  m_name: Lizard's Leg
-  m_elements: 0000000001000000
-  m_mesh: {fileID: -2884142046732351915, guid: 834621841ecc23f41b44ab8b8b08b15f, type: 3}
+  m_name: Scale of Mole
+  m_elements: 0200000000000000
+  m_mesh: {fileID: 3420325220818090854, guid: 9c30523253a2b7048a7b1e57383c04fd, type: 3}

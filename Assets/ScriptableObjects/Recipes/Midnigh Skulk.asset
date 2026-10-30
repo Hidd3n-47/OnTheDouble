@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02c3f1a5d5b9d69479690e0025c7e209, type: 3}
-  m_Name: Recipe
+  m_Name: Midnigh Skulk
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  Name: 
-  m_bases: 020000000100000004000000
+  m_name: Midnight Skulk
+  m_description: Narrows and focuses vision. Sadly. Flowing, grounded, yet firery
+    purpose
+  m_elements: 000000000200000003000000
+  m_potionIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_potionAbility: 6

@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02c3f1a5d5b9d69479690e0025c7e209, type: 3}
-  m_Name: Speed
+  m_Name: Recipe 5
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  Name: Potion of the Fleet
-  m_bases: 000000000100000003000000
+  m_name: Phantom Vapour
+  m_description: 'No ability (yet). Energy that glides and flows. '
+  m_elements: 040000000100000003000000
+  m_potionIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_potionAbility: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79c2edd61b8740191f4a6c1122a2a8, type: 3}
   m_Name: EyeOfNewt
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
-  m_name: 
+  m_name: Eye of Newt
   m_elements: 0100000003000000
   m_mesh: {fileID: -8555554294978984811, guid: 74e4b31096ad16744b2ce8f5984d24c3, type: 3}

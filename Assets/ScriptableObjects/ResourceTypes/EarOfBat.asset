@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e79c2edd61b8740191f4a6c1122a2a8, type: 3}
-  m_Name: WoolOfBat
+  m_Name: EarOfBat
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
-  m_name: Wool of Bat
+  m_name: Ear of Bat
   m_elements: 0400000001000000
   m_mesh: {fileID: 7577752148970125422, guid: f9d1afc66ad6d5f49b36ca5fa26b3b78, type: 3}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e79c2edd61b8740191f4a6c1122a2a8, type: 3}
   m_Name: OwletsWing
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
-  m_name: 
+  m_name: Owlet's Wing
   m_elements: 0100000002000000
   m_mesh: {fileID: -4712241657932502973, guid: b1e9be037df47bc49a147ba9c2c29b8c, type: 3}
