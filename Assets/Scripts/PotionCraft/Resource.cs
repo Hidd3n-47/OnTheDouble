@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEditor.ShaderGraph.Internal;
 
 [RequireComponent (typeof(MeshFilter))]
 [RequireComponent (typeof(MeshRenderer))]
@@ -10,6 +11,9 @@ public class Resource : MonoBehaviour
     ResourceType m_resourceType;
 
     [SerializeField] AnimationCurve m_animCurve;
+    [SerializeField] AnimationCurve m_scaleCurve;
+
+    [SerializeField] float m_travelTime = 0.8f;
 
     string m_name;
 
@@ -34,6 +38,8 @@ public class Resource : MonoBehaviour
         PlayerController player = col.gameObject.GetComponentInParent<PlayerController>();
         player.AddResource(m_resourceType);
 
+        transform.parent = player.transform;
+
         m_resourceType--;
 
         // TODO
@@ -43,38 +49,22 @@ public class Resource : MonoBehaviour
 
     IEnumerator SeekToCauldron( Transform cauldronLocation )
     {
-        // For dropping into cauldron from above
-        const float yDropDistance = 0.6f;
-        const float dropTime = 0.3f;
-        const float travelTime = 0.8f;
-        float timer = 0;
-
-        Vector3 initialDifference = cauldronLocation.position - transform.position;
-        float yOffset = 0;
+        float timer = 0.0f;
+        Vector3 initialPosition = transform.position;
 
         // Fly to position just above cauldron
-        while ( timer < travelTime )
+        while (timer < m_travelTime)
         {
-            float s = timer/travelTime;
-            Vector3 position = Vector3.Lerp(transform.position, cauldronLocation.position, s) - (Vector3.up * yOffset);
-            Vector3 difference = cauldronLocation.position - transform.position;
+            float s = timer/ m_travelTime;
+            Vector3 position = Vector3.Lerp(initialPosition, cauldronLocation.position, s);
 
-            yOffset = m_animCurve.Evaluate(s);
-            transform.position = position + (Vector3.up * yOffset);
+            float scale   = m_scaleCurve.Evaluate(s);
+            float yOffset = m_animCurve.Evaluate(s);
+
+            transform.position   = position + (Vector3.up * yOffset);
+            transform.localScale = new Vector3(scale, scale, scale);
             
-            timer = Mathf.Min(timer + Time.deltaTime, travelTime);
-            yield return new WaitForFixedUpdate();
-        }
-        timer = 0;
-        Vector3 dropVector = Vector3.up * yDropDistance;
-
-        // Drop into cauldron
-        while ( timer < dropTime )
-        {
-            float s = timer/dropTime;
-            Vector3 position = Vector3.Lerp(cauldronLocation.position, cauldronLocation.position - dropVector, s);
-
-            timer = Mathf.Min(timer + Time.deltaTime, dropTime);
+            timer = Mathf.Min(timer + Time.fixedDeltaTime, m_travelTime);
             yield return new WaitForFixedUpdate();
         }
 
