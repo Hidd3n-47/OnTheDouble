@@ -21,6 +21,13 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     Cauldron m_cauldron;
 
+    public int GetResourceCount(ResourceType resourceType)
+    {
+        if (!m_storedResources.ContainsKey(resourceType)) return 0;
+
+        return m_storedResources[resourceType];
+    }
+
     public void AddPotion(IPotion newPot)
     {
         if(m_numPotions < 4)
@@ -28,7 +35,6 @@ public class Inventory : MonoBehaviour
             Log.Msg("Brewed: " + newPot.Name);
 
             m_storedPotions[m_numPotions] = newPot;
-            //m_potionIcons[m_numPotions].sprite = newPot.Icon;
             ++m_numPotions;
         }
         else

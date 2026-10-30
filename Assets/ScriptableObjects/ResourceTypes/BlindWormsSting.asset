@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: Blind Worm's Sting
   m_elements: 0200000004000000
-  m_mesh: {fileID: 4300006, guid: ccb9255796f85d8438739116864d17b4, type: 3}
+  m_mesh: {fileID: 5041276974786776736, guid: 90b2046790600af4b8ec6e908ad6a66c, type: 3}
+  image: {fileID: 21300000, guid: 7c11af965d57696418a5db3e318ff139, type: 3}

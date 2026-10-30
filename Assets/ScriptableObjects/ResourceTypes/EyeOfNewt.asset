@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: Eye of Newt
   m_elements: 0100000003000000
-  m_mesh: {fileID: -8555554294978984811, guid: 74e4b31096ad16744b2ce8f5984d24c3, type: 3}
+  m_mesh: {fileID: 944978113613289287, guid: acf5a8f7734a36b48856e529d1c0d1e5, type: 3}
+  image: {fileID: 21300000, guid: cc1fba7b50dea4046a3f1285f830385d, type: 3}

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceType
   m_name: Scale of Mole
   m_elements: 0200000000000000
-  m_mesh: {fileID: 3420325220818090854, guid: 9c30523253a2b7048a7b1e57383c04fd, type: 3}
+  m_mesh: {fileID: 5283119659056591486, guid: f491e7350132e5c48b07273cc81e9a70, type: 3}
+  image: {fileID: 21300000, guid: 038a4fa2e07b4e64c882015a1e650baf, type: 3}

@@ -28,13 +28,13 @@ public static class ElementUtils
             case Element.Ignis:
                 return Color.darkRed;
             case Element.Aether:
-                return Color.antiqueWhite;
+                return Color.grey;
             case Element.Root:
-                return Color.burlywood;
+                return Color.brown;
             case Element.Dew:
                 return Color.aquamarine;
             case Element.Spark:
-                return Color.lightGoldenRodYellow;    
+                return Color.yellowNice;    
         }
         return Color.black;
     }
