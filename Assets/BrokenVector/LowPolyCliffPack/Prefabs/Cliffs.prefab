@@ -1,0 +1,1496 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1200688935523510916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3223149477941904363}
+  - component: {fileID: 7046551335450113496}
+  m_Layer: 6
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3223149477941904363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200688935523510916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000218557, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5025407555961604028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7046551335450113496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200688935523510916}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 119
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 440, y: 40, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2873113270358887227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4789862190093563302}
+  m_Layer: 6
+  m_Name: Cliffs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4789862190093563302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873113270358887227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8449753164487670597}
+  - {fileID: 3840215018766894491}
+  - {fileID: 7624339327318433627}
+  - {fileID: 3428564665303395931}
+  - {fileID: 7681476043577101087}
+  - {fileID: 3904482092262137495}
+  - {fileID: 6993970127721899938}
+  - {fileID: 2056874572231256355}
+  - {fileID: 3604786597598569018}
+  - {fileID: 5304013471561911594}
+  - {fileID: 5025407555961604028}
+  - {fileID: 1617576885778547908}
+  - {fileID: 4832378541845302031}
+  - {fileID: 3085432943416246001}
+  - {fileID: 9023066945339348524}
+  - {fileID: 3036724785175487463}
+  - {fileID: 6497338998198723434}
+  - {fileID: 8229570098611393151}
+  - {fileID: 4247042070240289630}
+  - {fileID: 264687255078884023}
+  - {fileID: 2560165866541695327}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &264687255078738821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &264687255078884023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 264687255078738821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1617576885778173430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &1617576885778547908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 1617576885778173430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2056874572231663633
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &2056874572231256355 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 2056874572231663633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2560165866541549677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &2560165866541695327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 2560165866541549677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3036724785175603925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3036724785175487463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3036724785175603925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3085432943416096707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3085432943416246001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3085432943416096707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3428564665303246697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3428564665303395931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3428564665303246697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3604786597598718728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3604786597598569018 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3604786597598718728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3840215018767305897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3840215018766894491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3840215018767305897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3904482092262545317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &3904482092262137495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 3904482092262545317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4247042070239881836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &4247042070240289630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 4247042070239881836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4832378541845676605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &4832378541845302031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 4832378541845676605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5025407555961196174
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3223149477941904363}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &5025407555961604028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 5025407555961196174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5304013471561794584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &5304013471561911594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 5304013471561794584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6497338998198577752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &6497338998198723434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 6497338998198577752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6993970127721524880
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &6993970127721899938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 6993970127721524880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7624339327318578793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &7624339327318433627 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 7624339327318578793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7681476043576721965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &7681476043577101087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 7681476043576721965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8229570098611805005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &8229570098611393151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 8229570098611805005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8449753164487553655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &8449753164487670597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 8449753164487553655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9023066945339203358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4789862190093563302}
+    m_Modifications:
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Name
+      value: Clifftile Straight 2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108976, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+--- !u!4 &9023066945339348524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 411954, guid: 89628d1fa4c1244408401deb6dcd80c5, type: 3}
+  m_PrefabInstance: {fileID: 9023066945339203358}
+  m_PrefabAsset: {fileID: 0}
