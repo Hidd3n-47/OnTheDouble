@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Transform   cauldron;
 
+    [SerializeField] private Outline     outline;
+    [SerializeField] private LayerMask   collisionLayer;
+
     private Inventory inventory;
 
     public Transform GetCauldronTransform()
@@ -76,6 +79,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         camera.position = transform.position + offset;
+
+        outline.enabled = (Physics.SphereCast(new Ray(camera.position, camera.forward), 1.0f, (transform.position - camera.position).magnitude, collisionLayer));
 
         ParticleLeft.SetActive(currentLean >= leanThreashold);
         ParticleRight.SetActive(currentLean <= -leanThreashold);

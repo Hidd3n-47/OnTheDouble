@@ -745,6 +745,10 @@ MonoBehaviour:
   forklift: {fileID: 8008291956966273762}
   optionsMenu: {fileID: 0}
   cauldron: {fileID: 5460697623897387158}
+  outline: {fileID: 9037344489628029122}
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
   camera: {fileID: 0}
   ParticleLeft: {fileID: 6739828437565177441}
   ParticleRight: {fileID: 5535115454277905299}
@@ -10825,7 +10829,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1db744b6957974e45a82f4da8f125baf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6590540499258427726}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7954493840732694743, guid: 1db744b6957974e45a82f4da8f125baf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9037344489628029122}
   m_SourcePrefab: {fileID: 100100000, guid: 1db744b6957974e45a82f4da8f125baf, type: 3}
 --- !u!4 &1787060147306805915 stripped
 Transform:
@@ -10837,3 +10844,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3130534661822943770, guid: 1db744b6957974e45a82f4da8f125baf, type: 3}
   m_PrefabInstance: {fileID: 2253577454055054704}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8152178063793223079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7954493840732694743, guid: 1db744b6957974e45a82f4da8f125baf, type: 3}
+  m_PrefabInstance: {fileID: 2253577454055054704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9037344489628029122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152178063793223079}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.051886797, b: 0.38897696, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
