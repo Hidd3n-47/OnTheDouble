@@ -14,28 +14,28 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.008
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.54
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.373
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_FlareFadeSpeed: 2.32
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_UseRadianceAmbientProbe: 0
@@ -931,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5d618894993dd5742908b6c4c62cdb73, type: 2}
+      objectReference: {fileID: 2100000, guid: 50d1efc5bbfcf19458221404f922812f, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42
@@ -4359,7 +4359,7 @@ PrefabInstance:
     - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6d08abe40b26ff6408c385dd95eafcbd, type: 2}
+      objectReference: {fileID: 2100000, guid: e6918e86d26bb0947b5d64d5b2a23eec, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51
@@ -9988,13 +9988,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.7697752, y: -0.21886724, z: 0.29971287, w: 0.5193414}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 68.552, y: -219.805, z: -175.978}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14304,7 +14304,7 @@ PrefabInstance:
     - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 90f9f96706f45b64b88fe627264a3053, type: 2}
+      objectReference: {fileID: 2100000, guid: 3251bef3dc3e72a4dba0b8fba8db1ad5, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22
@@ -20367,7 +20367,7 @@ Transform:
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.972, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22741,7 +22741,7 @@ PrefabInstance:
     - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2d5ef1b88daa2394c87480eb9e7ca4dc, type: 2}
+      objectReference: {fileID: 2100000, guid: f00f95473fe3c9245b06c1c3f4fc799e, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35
@@ -31190,7 +31190,7 @@ PrefabInstance:
     - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 223c7414e5482e041b007f4b9d8690a6, type: 2}
+      objectReference: {fileID: 2100000, guid: c54d162069908a741abe45e1001ab565, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -92
@@ -53824,6 +53824,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1917349238}
     m_Modifications:
+    - target: {fileID: 1286417296618578791, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd514312718ded24eb993d663f5649e4, type: 2}
     - target: {fileID: 2032001700874650167, guid: 4919b1655e74fa84caeee9bdc7e4c958, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72
