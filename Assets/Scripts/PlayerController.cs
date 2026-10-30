@@ -2,13 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// An enum for the state of the game, if the left bumper is down, we use PotionWheel::Left.
-public enum PotionWheel
-{
-    None,
-    Left, 
-    Right,
-}
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,9 +46,8 @@ public class PlayerController : MonoBehaviour
 
     private Inventory inventory;
 
-    private PotionWheel potionWheel;
-    [SerializeField] PotionWheelSO leftPotionWheel;
-    [SerializeField] PotionWheelSO rightPotionWheel;
+    [SerializeField] ResourceWheelUi leftResourceWheel;
+    [SerializeField] ResourceWheelUi rightResourceWheel;
 
     public Transform GetCauldronTransform()
     {
@@ -74,9 +66,15 @@ public class PlayerController : MonoBehaviour
 
     public Transform camera;
 
-    public GameObject ParticleLeft;
-    public GameObject ParticleRight;
+    public ParticleSystem ParticleLeft;
+    public ParticleSystem ParticleRight;
+    public ParticleSystem ParticleBack;
+
     public float leanThreashold = 20.0f;
+
+
+    bool leaningLeft = false;
+    bool leaningRight = false;
 
     private Vector3 offset;
 
@@ -85,6 +83,9 @@ public class PlayerController : MonoBehaviour
         offset = camera.position - transform.position;
 
         inventory = GetComponent<Inventory>();
+
+        rightResourceWheel.Initialize(inventory);
+        leftResourceWheel.Initialize(inventory);
     }
 
 
@@ -94,42 +95,51 @@ public class PlayerController : MonoBehaviour
 
         outline.enabled = (Physics.SphereCast(new Ray(camera.position, camera.forward), 1.0f, (transform.position - camera.position).magnitude, collisionLayer));
 
-        ParticleLeft.SetActive(currentLean >= leanThreashold);
-        ParticleRight.SetActive(currentLean <= -leanThreashold);
+        if(currentLean >= leanThreashold)
+        {
+            if (!leaningLeft)
+            {
+                ParticleLeft.Play();
+            }
+            leaningLeft = true;
+        }
+        else
+        {
+            leaningLeft = false;
+            ParticleLeft.Stop();
+        }
+
+        if (currentLean <= -leanThreashold)
+        {
+            if (!leaningRight)
+            {
+                ParticleRight.Play();
+            }
+            leaningRight = true;
+        }
+        else
+        {
+            leaningRight = false;
+            ParticleRight.Stop();
+        }
 
         bool leftBumberDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f;
         bool rightBumberDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f;
 
         if (leftBumberDown)
         {
-            potionWheel = PotionWheel.Left;
+            leftResourceWheel.Activate();
+            rightResourceWheel.Deactivate();
         }
         else if (rightBumberDown)
         {
-            potionWheel = PotionWheel.Right;
+            rightResourceWheel.Activate();
+            leftResourceWheel.Deactivate();
         }
         else
         {
-            potionWheel = PotionWheel.None;
-        }
-
-        if (potionWheel != PotionWheel.None)
-        {
-            // todo ui stuff hererererer.
-
-            int button = 0;
-
-            button = (Gamepad.current?.buttonWest.ReadValue()  ?? 0.0f) >= 0.5f ? 1 : button;
-            button = (Gamepad.current?.buttonEast.ReadValue()  ?? 0.0f) >= 0.5f ? 2 : button;
-            button = (Gamepad.current?.buttonNorth.ReadValue() ?? 0.0f) >= 0.5f ? 3 : button;
-            button = (Gamepad.current?.buttonSouth.ReadValue() ?? 0.0f) >= 0.5f ? 4 : button;
-
-            PotionWheelSO wheel = potionWheel == PotionWheel.Left ? leftPotionWheel : rightPotionWheel;
-
-            if (button > 0)
-            {
-                inventory.UseIngredient(wheel.resources[button - 1]);
-            }
+            leftResourceWheel.Deactivate();
+            rightResourceWheel.Deactivate();
         }
     }
     private void FixedUpdate()
