@@ -15,6 +15,7 @@ public class ResourceType : ScriptableObject
     Mesh m_mesh; 
 
     public Mesh mesh => m_mesh;
+    public Sprite image;
     public string Name => m_name;
 
     public Element[] Elements => m_elements;

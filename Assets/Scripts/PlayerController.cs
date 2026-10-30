@@ -2,13 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// An enum for the state of the game, if the left bumper is down, we use PotionWheel::Left.
-public enum PotionWheel
-{
-    None,
-    Left, 
-    Right,
-}
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,9 +46,8 @@ public class PlayerController : MonoBehaviour
 
     private Inventory inventory;
 
-    private PotionWheel potionWheel;
-    [SerializeField] PotionWheelSO leftPotionWheel;
-    [SerializeField] PotionWheelSO rightPotionWheel;
+    [SerializeField] ResourceWheelUi leftResourceWheel;
+    [SerializeField] ResourceWheelUi rightResourceWheel;
 
     public Transform GetCauldronTransform()
     {
@@ -91,6 +83,9 @@ public class PlayerController : MonoBehaviour
         offset = camera.position - transform.position;
 
         inventory = GetComponent<Inventory>();
+
+        rightResourceWheel.Initialize(inventory);
+        leftResourceWheel.Initialize(inventory);
     }
 
 
@@ -133,34 +128,18 @@ public class PlayerController : MonoBehaviour
 
         if (leftBumberDown)
         {
-            potionWheel = PotionWheel.Left;
+            leftResourceWheel.Activate();
+            rightResourceWheel.Deactivate();
         }
         else if (rightBumberDown)
         {
-            potionWheel = PotionWheel.Right;
+            rightResourceWheel.Activate();
+            leftResourceWheel.Deactivate();
         }
         else
         {
-            potionWheel = PotionWheel.None;
-        }
-
-        if (potionWheel != PotionWheel.None)
-        {
-            // todo ui stuff hererererer.
-
-            int button = 0;
-
-            button = (Gamepad.current?.buttonWest.ReadValue()  ?? 0.0f) >= 0.5f ? 1 : button;
-            button = (Gamepad.current?.buttonEast.ReadValue()  ?? 0.0f) >= 0.5f ? 2 : button;
-            button = (Gamepad.current?.buttonNorth.ReadValue() ?? 0.0f) >= 0.5f ? 3 : button;
-            button = (Gamepad.current?.buttonSouth.ReadValue() ?? 0.0f) >= 0.5f ? 4 : button;
-
-            PotionWheelSO wheel = potionWheel == PotionWheel.Left ? leftPotionWheel : rightPotionWheel;
-
-            if (button > 0)
-            {
-                inventory.UseIngredient(wheel.resources[button - 1]);
-            }
+            leftResourceWheel.Deactivate();
+            rightResourceWheel.Deactivate();
         }
     }
     private void FixedUpdate()
