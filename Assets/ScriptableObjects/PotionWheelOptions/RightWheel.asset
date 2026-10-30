@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f7b534d1a5a4d4d93ec824d791e947, type: 3}
   m_Name: RightWheel
   m_EditorClassIdentifier: Assembly-CSharp::PotionWheelSO
-  lFace: {fileID: 11400000, guid: 50bf15a89fd7a2b40b77b4b8c094b161, type: 2}
-  rFace: {fileID: 11400000, guid: 1a94a4d08f3b8604e8ed013b7f51af4c, type: 2}
-  uFace: {fileID: 11400000, guid: a993a3add155ff24cabd81856e03193d, type: 2}
-  dFace: {fileID: 11400000, guid: 8790e58f657025f4daba8dd69807c67e, type: 2}
+  resources:
+  - {fileID: 11400000, guid: 50bf15a89fd7a2b40b77b4b8c094b161, type: 2}
+  - {fileID: 11400000, guid: 1a94a4d08f3b8604e8ed013b7f51af4c, type: 2}
+  - {fileID: 11400000, guid: a993a3add155ff24cabd81856e03193d, type: 2}
+  - {fileID: 11400000, guid: 8790e58f657025f4daba8dd69807c67e, type: 2}

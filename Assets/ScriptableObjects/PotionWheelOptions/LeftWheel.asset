@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f7b534d1a5a4d4d93ec824d791e947, type: 3}
   m_Name: LeftWheel
   m_EditorClassIdentifier: Assembly-CSharp::PotionWheelSO
-  lFace: {fileID: 11400000, guid: a3b931652375d8f4bb4cc890037d5cec, type: 2}
-  rFace: {fileID: 11400000, guid: 493b3d63c6616e24e9bbc8d331a06e77, type: 2}
-  uFace: {fileID: 11400000, guid: 7603a170b7f89a0419ed68188fa3a7c3, type: 2}
-  dFace: {fileID: 11400000, guid: aacba0869775a314495dd11bedf159c4, type: 2}
+  resources:
+  - {fileID: 11400000, guid: a3b931652375d8f4bb4cc890037d5cec, type: 2}
+  - {fileID: 11400000, guid: 493b3d63c6616e24e9bbc8d331a06e77, type: 2}
+  - {fileID: 11400000, guid: 7603a170b7f89a0419ed68188fa3a7c3, type: 2}
+  - {fileID: 11400000, guid: aacba0869775a314495dd11bedf159c4, type: 2}
