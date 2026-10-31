@@ -109,11 +109,12 @@ public class Cauldron : MonoBehaviour
                 Log.Msg("Brews: " + recipe.Name);
                 if (m_potions.ContainsKey(recipe.ID))
                 {
+                    m_potions[recipe.ID].Combo = currentBrew;
                     StartCoroutine(BrewPotion(m_potions[recipe.ID]));
                     break;
                 }
 
-                StartCoroutine(BrewPotion(new GenericPotion(recipe)));
+                StartCoroutine(BrewPotion(new GenericPotion(recipe, currentBrew)));
                 // Need to add new ones for each generic to avoid renaming potions!
                 
                 break;

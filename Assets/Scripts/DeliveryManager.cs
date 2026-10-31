@@ -3,14 +3,15 @@ using UnityEngine.UI;
 
 public class DeliveryManager : MonoBehaviour
 {
-    [SerializeField] private Recipe[]    _recipes;
-    [SerializeField] private Transform[] _gaffs;
-
+    [SerializeField] private Recipe[]   _recipes;
+    [SerializeField] private Customer[] _gaffs;
+     
     [Header("UI")]
     [SerializeField] private Image _potionImage;
     [SerializeField] private Image[] _potionElements;
 
     private Recipe _currentRecipe;
+    public  Recipe CurrentRecipe => _currentRecipe;
 
     public void RequestPotion()
     {
@@ -21,6 +22,8 @@ public class DeliveryManager : MonoBehaviour
         }
 
         _currentRecipe = _recipes[Random.Range(0, _recipes.Length)];
+
+        _gaffs[Random.Range(0, _gaffs.Length)].Activate(this);
 
         //_potionImage.sprite = potion.sprite;
         for (int i = 0; i < _potionElements.Length; ++i)

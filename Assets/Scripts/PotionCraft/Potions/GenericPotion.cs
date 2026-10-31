@@ -9,6 +9,8 @@ public class GenericPotion : IPotion
     public string Name => m_name;
     public PotionAbility ID => m_ability;
     public Sprite Icon => m_icon;
+    // Sorry Matt, pretend you don't see this and it's all good.
+    public Combo Combo { get; set; }
 
     public virtual void Drink(GameObject target)
     {
@@ -17,11 +19,19 @@ public class GenericPotion : IPotion
         // target.GetComponent<PotionFX>().DefaultDrink();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GenericPotion(Recipe recipe)
     {
-        m_name = recipe.Name;
-        m_icon = recipe.Icon;
+        m_name    = recipe.Name;
+        m_icon    = recipe.Icon;
         m_ability = recipe.ID;
+    }
+
+    // Sorry Matt, pretend you don't see this and it's all good.
+    public GenericPotion(Recipe recipe, Combo combo)
+    {
+        m_name     = recipe.Name;
+        m_icon     = recipe.Icon;
+        m_ability  = recipe.ID;
+        this.Combo = combo;
     }
 }

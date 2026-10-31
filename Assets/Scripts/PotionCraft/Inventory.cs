@@ -54,6 +54,25 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public bool DeliverPotion(Recipe desiredRecipe)
+    {
+        Combo combo = new Combo(desiredRecipe.Elements);
+
+        for (int i = 0; i < m_numPotions; ++i)
+        {
+            if (m_storedPotions[i].Combo == combo)
+            {
+                PopPotion(i);
+                Debug.Log("Delivered.");
+                return true;
+            }
+        }
+
+        Debug.Log("Not delivered as don't have the correct pot :(");
+        return false;
+    }
+
+
     public IPotion DeliverPotion(int potionLocation)
     {
         Log.Msg("Delivers: " + m_storedPotions[potionLocation].Name);

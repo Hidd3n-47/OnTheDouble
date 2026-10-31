@@ -18,6 +18,8 @@ public interface IPotion
     public abstract string Name { get; }
     public abstract PotionAbility ID { get; }
     public abstract Sprite Icon { get; }
+    // Sorry Matt, pretend you don't see this and it's all good.
+    public abstract Combo Combo { get; set; }
 
     // Each potion could affect a different component, so this way we pass any target
     // and the concrete potion finds the relevant component.

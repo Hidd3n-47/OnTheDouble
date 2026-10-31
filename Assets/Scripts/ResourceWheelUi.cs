@@ -53,10 +53,10 @@ public class ResourceWheelUi : MonoBehaviour
 
         int button = 0;
 
-        button = (Gamepad.current?.buttonWest.ReadValue() ?? 0.0f)  >= 0.5f ? 1 : button;
-        button = (Gamepad.current?.buttonEast.ReadValue() ?? 0.0f)  >= 0.5f ? 2 : button;
-        button = (Gamepad.current?.buttonNorth.ReadValue() ?? 0.0f) >= 0.5f ? 3 : button;
-        button = (Gamepad.current?.buttonSouth.ReadValue() ?? 0.0f) >= 0.5f ? 4 : button;
+        button = (Gamepad.current?.buttonWest.ReadValue()  ?? (Input.GetKey(KeyCode.J) ? 1.0f : 0.0f)) >= 0.5f ? 1 : button;
+        button = (Gamepad.current?.buttonEast.ReadValue()  ?? (Input.GetKey(KeyCode.L) ? 1.0f : 0.0f)) >= 0.5f ? 2 : button;
+        button = (Gamepad.current?.buttonNorth.ReadValue() ?? (Input.GetKey(KeyCode.I) ? 1.0f : 0.0f)) >= 0.5f ? 3 : button;
+        button = (Gamepad.current?.buttonSouth.ReadValue() ?? (Input.GetKey(KeyCode.K) ? 1.0f : 0.0f)) >= 0.5f ? 4 : button;
 
 
         for (int i = 0; i < _resources.resources.Length; ++i)
