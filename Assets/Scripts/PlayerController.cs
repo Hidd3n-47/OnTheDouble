@@ -123,8 +123,8 @@ public class PlayerController : MonoBehaviour
             ParticleRight.Stop();
         }
 
-        bool leftBumberDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f;
-        bool rightBumberDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f;
+        bool leftBumberDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.Q);
+        bool rightBumberDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.E);
 
         if (leftBumberDown)
         {
@@ -145,12 +145,14 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Input.
-        float acceleration    = Gamepad.current?.rightTrigger.ReadValue() ?? 0.0f;
-        float brake           = Gamepad.current?.leftTrigger.ReadValue()  ?? 0.0f;
+        float acceleration    = Gamepad.current?.rightTrigger.ReadValue() ?? (Input.GetKey(KeyCode.W) ? 1.0f : 0.0f);
+        float brake           = Gamepad.current?.leftTrigger.ReadValue()  ?? (Input.GetKey(KeyCode.S) ? 1.0f : 0.0f);
         forklift.AcceleratingThisFrame = acceleration != 0.0f;
         forklift.BrakingThisFrame      = brake != 0.0f;
 
-        float horizontalInput = (float)Math.Round(Gamepad.current?.leftStick.value.x ?? 0, 2);
+        float keyboardHorizontal = (Input.GetKey(KeyCode.A) ? -1.0f : 0.0f) + (Input.GetKey(KeyCode.D) ? 1.0f : 0.0f);
+
+        float horizontalInput = (float)Math.Round(Gamepad.current?.leftStick.value.x ?? keyboardHorizontal, 2);
         float targetLean = horizontalInput * maxLeanAngle;
         currentLean = Mathf.Lerp(currentLean, targetLean, Time.deltaTime * leanSpeed);
         visualModel.localRotation = Quaternion.Euler(0f, 0f, -currentLean);
