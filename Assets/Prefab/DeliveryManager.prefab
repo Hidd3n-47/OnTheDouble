@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8697362334321052989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3406831619655792015}
+  - component: {fileID: 3608288823882235019}
+  m_Layer: 0
+  m_Name: DeliveryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3406831619655792015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697362334321052989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3608288823882235019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697362334321052989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e168c07a730af244a14699fe97a0102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeliveryManager
+  _recipes:
+  - {fileID: 11400000, guid: 506736ef6dfa56c45a2723187e0ed2ef, type: 2}
+  - {fileID: 11400000, guid: 731e4a245213a9447b6f1d78e142b022, type: 2}
+  - {fileID: 11400000, guid: bb8441c0bd1d0d54488f9624fb29cc06, type: 2}
+  - {fileID: 11400000, guid: 5b7e2e77bf52b7a488050ed4484b376e, type: 2}
+  - {fileID: 11400000, guid: 773008e8f2d1d3148bba57ac3e27646e, type: 2}
+  - {fileID: 11400000, guid: 5ef2d9a4a0eaeae4da79706cddb40fe4, type: 2}
+  - {fileID: 11400000, guid: ce9b3068d577596439acccf71045e6fc, type: 2}
+  - {fileID: 11400000, guid: c591c2d1a3058c54bbe0804bcf50f675, type: 2}
+  - {fileID: 11400000, guid: b3a0f4f11cb1b31479bfbebd5ce15192, type: 2}
+  - {fileID: 11400000, guid: 2c8f26e3be0f003418ec42fffcb52176, type: 2}
+  _gaffs: []
+  _potionImage: {fileID: 0}
+  _potionElements:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
