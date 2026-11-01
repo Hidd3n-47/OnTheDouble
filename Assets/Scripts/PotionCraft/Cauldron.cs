@@ -7,47 +7,55 @@ public class Cauldron : MonoBehaviour
 {
     const int k_ingredientQuantity = 4;
 
-    [SerializeField] ParticleSystem m_cauldromSmoke;
+    [SerializeField] 
+    ParticleSystem m_cauldromSmoke;
 
     [SerializeField]
     Recipe[] m_recipes = new Recipe[0];
-    Dictionary<PotionAbility, IPotion> m_potions = new Dictionary<PotionAbility, IPotion>();
 
     [SerializeField]
     Inventory m_inventory;
 
-    Element[] m_addedElements = new Element[k_ingredientQuantity] { Element.Max, Element.Max, Element.Max, Element.Max };
-
     [SerializeField]
     MeshRenderer[] m_elementOrbs = new MeshRenderer[k_ingredientQuantity];
+
+    readonly Dictionary<PotionAbility, IPotion> m_potions = new Dictionary<PotionAbility, IPotion>();
+    readonly Element[] m_addedElements = new Element[k_ingredientQuantity] { Element.Max, Element.Max, Element.Max, Element.Max };
+    readonly Queue<IPotion> m_potionBacklog = new Queue<IPotion>();
+    bool m_brewing = false;
 
     void Start()
     {
         // TODO: Add to Dictionary every Potion Created
         for (int i = 0; i < m_recipes.Length; ++i)
         {
-            switch (m_recipes[i].ID)
+            IPotion potion = null;
+            Recipe recipe = m_recipes[i];
+            switch (recipe.ID)
             {
                 case PotionAbility.Speed:
                 case PotionAbility.Slow:
-                    m_potions.Add(m_recipes[i].ID, new SpeedModPotion(m_recipes[i]));
+                    potion = new SpeedModPotion(recipe);
                     break;
                 case PotionAbility.Magnetism:
+                    potion = new MagnetismPotion(recipe);
                     break;
                 case PotionAbility.Butterfingers:
+                    potion = new ButterfingersPotion(recipe);
                     break;
                 case PotionAbility.VisionBoost:
                 case PotionAbility.Blinkers:
+                    potion = new VisionModPotion(recipe);
                     break;
-                case PotionAbility.Stun:
+                case PotionAbility.Confuse:
+                    potion = new ConfusePotion(recipe);
                     break;
                 default:
                     break;
             }
-
+            if(potion != null && !m_potions.ContainsKey(recipe.ID)) m_potions.Add(m_recipes[i].ID, potion);
         }
     }
-
 
     public bool AddIngredient(ResourceType ingredient)
     {
@@ -98,67 +106,75 @@ public class Cauldron : MonoBehaviour
     void Brew()
     {
         // TODO: Coroutine or call out to any visual/audio behaviours 
-
-        bool brewed = false;
         foreach (Recipe recipe in m_recipes)
         {
             Combo currentBrew = new Combo(m_addedElements);
             if ( recipe == currentBrew )
             {
-                brewed = true;
-                Log.Msg("Brews: " + recipe.Name);
                 if (m_potions.ContainsKey(recipe.ID))
                 {
-                    m_potions[recipe.ID].Combo = currentBrew;
-                    StartCoroutine(BrewPotion(m_potions[recipe.ID]));
-                    break;
+                    Enqueue(m_potions[recipe.ID]);
+                    return;
                 }
 
-                StartCoroutine(BrewPotion(new GenericPotion(recipe, currentBrew)));
-                // Need to add new ones for each generic to avoid renaming potions!
-                
-                break;
+                Enqueue(new GenericPotion(recipe));
+                return;
             }
         }
 
-        if(!brewed)
+        SpawnSmoke(Color.darkGray, 15);
+        Log.Msg("Brewing Failed: " + new Combo(m_addedElements).ToString());
+        ResetIngredients();
+    }
+
+    void Enqueue(IPotion potion)
+    {
+        Log.Msg("Queued: " + potion.Name);
+        m_potionBacklog.Enqueue(potion);
+        if(!m_brewing)
         {
-            SpawnSmoke(Color.darkGray, 15);
-            ResetIngredients();
-            Log.Msg("Brewing Failed: " + new Combo(m_addedElements).ToString());
+            StartCoroutine(BrewPotion());
         }
     }
 
-    IEnumerator BrewPotion(IPotion potion)
+    IEnumerator BrewPotion()
     {
+        const float brewTime = 1f;
+        const float smokeTime = 0.1f;
+        const float newPotionDelay = 1f;
 
-        Color[] cols = new Color[3];
-        for (int i = 0; i < 3; ++i)
-        {
-            cols[i] = ElementUtils.ElementToColour(m_addedElements[i]);
+        m_brewing = true;
+        while(m_potionBacklog.Count > 0)
+        {            
+            IPotion potion = m_potionBacklog.Dequeue();
+            Combo recipe = potion.Combo;
+            ResetIngredients();
+            Color[] cols = new Color[3];
+            for (int i = 0; i < 3; ++i)
+            {
+                cols[i] = ElementUtils.ElementToColour(recipe[i]);
+            }
+            Color smokeCol = (cols[0] + cols[1] + cols[2])/3;
+
+            float timer = brewTime;
+            while ((timer -= Time.deltaTime) > 0)
+            {
+                SpawnSmoke(smokeCol, 2);
+                yield return new WaitForSeconds(smokeTime);
+            }
+
+            SpawnSmoke(smokeCol, 10);
+            m_inventory.AddPotion(potion);
+
+            yield return new WaitForSeconds(newPotionDelay);
         }
-        Color smokeCol = (cols[0] + cols[1] + cols[2])/3;
-
-        ResetIngredients();
-
-        float timer = 1;
-        while ((timer -= Time.deltaTime) > 0)
-        {
-            SpawnSmoke(smokeCol, 2);
-            yield return new WaitForSeconds(0.1f);
-        }
-
-        SpawnSmoke(smokeCol, 10);
-        m_inventory.AddPotion(potion);
-
-
+        m_brewing = false;
     }
 
     void SpawnSmoke(Color col, int count)
     {
-        var param = m_cauldromSmoke.main;
+        ParticleSystem.MainModule param = m_cauldromSmoke.main;
         param.startColor = col;
-
 
         m_cauldromSmoke.Emit(count);
     }

@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IModdable
 {
     [Header("Engine")]
     [Tooltip("The curve of acceleration based off how long the accelerate has been held down.")]
@@ -48,6 +49,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] ResourceWheelUi leftResourceWheel;
     [SerializeField] ResourceWheelUi rightResourceWheel;
+    [SerializeField] Collider pickupCollider;
+
+    public float EngineMaxSpeedModifier { get; set; }
+    public int ConfusedCount { get; set; }
 
     public Transform GetCauldronTransform()
     {
@@ -78,8 +83,13 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 offset;
 
+    List<IMod> m_mods = new List<IMod>();
+
     private void Start()
     {
+        ConfusedCount = 0;
+        EngineMaxSpeedModifier = 1;
+
         offset = camera.position - transform.position;
 
         inventory = GetComponent<Inventory>();
@@ -126,6 +136,13 @@ public class PlayerController : MonoBehaviour
         bool leftBumberDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.Q);
         bool rightBumberDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.E);
 
+        if(ConfusedCount > 0)
+        {
+            bool temp = rightBumberDown;
+            rightBumberDown = leftBumberDown;
+            leftBumberDown = temp;
+        }
+
         if (leftBumberDown)
         {
             leftResourceWheel.Activate();
@@ -141,6 +158,9 @@ public class PlayerController : MonoBehaviour
             leftResourceWheel.Deactivate();
             rightResourceWheel.Deactivate();
         }
+        
+        // Mostly this weird implementation is for shiggles. - M@
+        m_mods.RemoveAll(mod => mod.Expired ? mod.Dispose : false);
     }
     private void FixedUpdate()
     {
@@ -151,8 +171,14 @@ public class PlayerController : MonoBehaviour
         forklift.BrakingThisFrame      = brake != 0.0f;
 
         float keyboardHorizontal = (Input.GetKey(KeyCode.A) ? -1.0f : 0.0f) + (Input.GetKey(KeyCode.D) ? 1.0f : 0.0f);
-
         float horizontalInput = (float)Math.Round(Gamepad.current?.leftStick.value.x ?? keyboardHorizontal, 2);
+
+        if(ConfusedCount > 0)
+        {
+            // Oh yeah. We're doing this :P
+            horizontalInput *= -1;
+        }
+
         float targetLean = horizontalInput * maxLeanAngle;
         currentLean = Mathf.Lerp(currentLean, targetLean, Time.deltaTime * leanSpeed);
         visualModel.localRotation = Quaternion.Euler(0f, 0f, -currentLean);
@@ -212,7 +238,7 @@ public class PlayerController : MonoBehaviour
         {
             forklift.Engine.Power = Math.Clamp(forklift.Engine.Power,
                 0.0f,
-                enginePowerMaxCurve.Evaluate(engineAccelerationTimer.position) * engineMaxPowerSpring.position);
+                enginePowerMaxCurve.Evaluate(engineAccelerationTimer.position) * engineMaxPowerSpring.position * EngineMaxSpeedModifier);
         }
         else if (engineInput < 0.0f)
         {
@@ -247,5 +273,62 @@ public class PlayerController : MonoBehaviour
 
 
         }
+    }
+
+    public virtual void AddMod(PotionAbility ability, float amount)
+    { 
+        switch (ability)
+        {
+            case PotionAbility.Speed:
+            case PotionAbility.Slow:
+                AddSpeedMod(amount);
+                break;
+            case PotionAbility.Magnetism:
+                AddPickupRangeMod(amount);
+                break;
+            case PotionAbility.Butterfingers:
+                AddButterFingersMod((int)amount);
+                break;
+            case PotionAbility.VisionBoost:
+            case PotionAbility.Blinkers:
+                AddVisionMod(amount);
+                break;
+            case PotionAbility.Confuse:
+                AddConfuseMod();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void AddSpeedMod(float amount)
+    {
+        const float modifierTime = 4f;
+        m_mods.Add(new ModSpeed(this, amount, modifierTime));
+    }
+
+    public void AddPickupRangeMod(float amount)
+    {
+        const float modifierTime = 8f;
+        if (pickupCollider) m_mods.Add(new ModPickupRange(pickupCollider, amount, modifierTime));
+    }
+
+    public void AddVisionMod(float amount)
+    {
+        const float modifierTime = 15f;
+        Camera cam = camera.GetComponent<Camera>();
+        if(cam) m_mods.Add(new ModVision(camera.GetComponent<Camera>(), amount, modifierTime));
+        
+    }
+
+    public void AddButterFingersMod(int amount)
+    {
+        if(inventory) m_mods.Add(new ModButterFingers(inventory, amount));
+    }
+
+    public void AddConfuseMod()
+    {
+        const float modifierTime = 6f;
+        m_mods.Add(new ModConfuse(this, modifierTime));
     }
 }

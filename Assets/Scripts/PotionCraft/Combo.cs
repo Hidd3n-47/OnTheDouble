@@ -39,6 +39,12 @@ public class Combo
         return !(a == b);
     }
 
+    public Element this[int index]
+    {
+        get { return m_elements[index]; }
+        set { m_elements[index] = value; }
+    }
+
     public override bool Equals(object obj)
     {
         Combo c = obj as Combo;
@@ -70,4 +76,5 @@ public class Combo
 
         return s.GetHashCode();
     }
+
 }

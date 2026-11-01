@@ -1,9 +1,8 @@
-using JetBrains.Annotations;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
 using System.IO;
 using System.Text;
-using UnityEngine;
 
 public class ResourceTest : MonoBehaviour
 {

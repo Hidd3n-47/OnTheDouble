@@ -29,7 +29,6 @@ public class Resource : MonoBehaviour
         m_resourceType++;
     }
 
-
     void OnTriggerEnter(Collider col)
     {
         // Could test for layer etc, but currently no other rigids but player so no point. 
@@ -42,9 +41,7 @@ public class Resource : MonoBehaviour
 
         m_resourceType--;
 
-        // TODO
         StartCoroutine(SeekToCauldron(player.GetCauldronTransform()));
-        //Inventory.AddResource(m_resource);
     }
 
     IEnumerator SeekToCauldron( Transform cauldronLocation )

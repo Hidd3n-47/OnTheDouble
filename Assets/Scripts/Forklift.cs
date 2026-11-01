@@ -2,19 +2,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-class ModSpeed
-{
-    ModSpeed(MovementControl m)
-    {
-        //m.Pow
-    }
 
-    int value;
-    float timer = 4f;
-}
 
 public class Forklift : MonoBehaviour
 {
+
+
     public Action<Collision> OnCollideFront;
     public Action<Collision> OnCollideBack;
     public Action<Collision> OnCollideRight;
@@ -29,8 +22,6 @@ public class Forklift : MonoBehaviour
     public Force Wheels = new();
 
     public List<Force> ExternalForces = new();
-
-    List<ModSpeed> m_mods;
 
     public bool IsBoosting = false;
 
@@ -79,10 +70,5 @@ public class Forklift : MonoBehaviour
     {
         ExternalForces.ForEach(f => f.Refresh());
         ExternalForces.RemoveAll(f => f.Power == 0.0f);
-    }
-
-    internal void ModSpeed(float v)
-    {
-        throw new NotImplementedException();
     }
 }

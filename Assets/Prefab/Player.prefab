@@ -5589,6 +5589,7 @@ MonoBehaviour:
     m_Bits: 64
   leftResourceWheel: {fileID: 0}
   rightResourceWheel: {fileID: 0}
+  pickupCollider: {fileID: 7472217792740122466}
   camera: {fileID: 0}
   ParticleLeft: {fileID: 6796998927923470814}
   ParticleRight: {fileID: 9210872844629912215}
@@ -5659,12 +5660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9dec759fac57444806bf4ca87ac405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  m_emptyPotionSlot: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_potionIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_cauldron: {fileID: 922600559378575600}
 --- !u!114 &922600559378575600
 MonoBehaviour:
@@ -5678,7 +5673,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d89dbbb22641224e903f3d7e5536916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cauldron
-  m_cauldromSmoke: {fileID: 0}
+  m_cauldromSmoke: {fileID: 1575755404298066406}
+  m_recipes:
+  - {fileID: 11400000, guid: 506736ef6dfa56c45a2723187e0ed2ef, type: 2}
+  - {fileID: 11400000, guid: 731e4a245213a9447b6f1d78e142b022, type: 2}
+  - {fileID: 11400000, guid: bb8441c0bd1d0d54488f9624fb29cc06, type: 2}
+  - {fileID: 11400000, guid: 5b7e2e77bf52b7a488050ed4484b376e, type: 2}
+  - {fileID: 11400000, guid: 773008e8f2d1d3148bba57ac3e27646e, type: 2}
+  - {fileID: 11400000, guid: 5ef2d9a4a0eaeae4da79706cddb40fe4, type: 2}
+  - {fileID: 11400000, guid: ce9b3068d577596439acccf71045e6fc, type: 2}
+  - {fileID: 11400000, guid: c591c2d1a3058c54bbe0804bcf50f675, type: 2}
+  - {fileID: 11400000, guid: b3a0f4f11cb1b31479bfbebd5ce15192, type: 2}
+  - {fileID: 11400000, guid: 2c8f26e3be0f003418ec42fffcb52176, type: 2}
+  m_inventory: {fileID: 8479418090743180951}
   m_elementOrbs:
   - {fileID: 6324120584184766063}
   - {fileID: 5559652758472559037}
@@ -15650,6 +15657,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9c821e9f66363478cec23d563f0f28, type: 3}
+--- !u!198 &1575755404298066406 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1880429612944028964, guid: cd9c821e9f66363478cec23d563f0f28, type: 3}
+  m_PrefabInstance: {fileID: 1136760831811382466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5961357703313073343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6736376563751864445, guid: cd9c821e9f66363478cec23d563f0f28, type: 3}
