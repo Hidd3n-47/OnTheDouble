@@ -8,7 +8,7 @@ public class Cauldron : MonoBehaviour
     const int k_ingredientQuantity = 4;
 
     [SerializeField] 
-    ParticleSystem m_cauldromSmoke;
+    ParticleSystem m_cauldronSmoke;
 
     [SerializeField]
     Recipe[] m_recipes = new Recipe[0];
@@ -18,6 +18,9 @@ public class Cauldron : MonoBehaviour
 
     [SerializeField]
     MeshRenderer[] m_elementOrbs = new MeshRenderer[k_ingredientQuantity];
+
+    [SerializeField]
+    Effect m_potionCreatedEffect;
 
     readonly Dictionary<PotionAbility, IPotion> m_potions = new Dictionary<PotionAbility, IPotion>();
     readonly Element[] m_addedElements = new Element[k_ingredientQuantity] { Element.Max, Element.Max, Element.Max, Element.Max };
@@ -157,13 +160,13 @@ public class Cauldron : MonoBehaviour
             Color smokeCol = (cols[0] + cols[1] + cols[2])/3;
 
             float timer = brewTime;
-            while ((timer -= Time.deltaTime) > 0)
+            while ((timer -= smokeTime) > 0)
             {
                 SpawnSmoke(smokeCol, 2);
                 yield return new WaitForSeconds(smokeTime);
             }
 
-            SpawnSmoke(smokeCol, 10);
+            m_potionCreatedEffect.Play();
             m_inventory.AddPotion(potion);
 
             yield return new WaitForSeconds(newPotionDelay);
@@ -173,10 +176,10 @@ public class Cauldron : MonoBehaviour
 
     void SpawnSmoke(Color col, int count)
     {
-        ParticleSystem.MainModule param = m_cauldromSmoke.main;
+        ParticleSystem.MainModule param = m_cauldronSmoke.main;
         param.startColor = col;
 
-        m_cauldromSmoke.Emit(count);
+        m_cauldronSmoke.Emit(count);
     }
 
     void ResetIngredients()

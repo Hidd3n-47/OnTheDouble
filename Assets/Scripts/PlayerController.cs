@@ -51,6 +51,10 @@ public class PlayerController : MonoBehaviour, IModdable
     [SerializeField] ResourceWheelUi rightResourceWheel;
     [SerializeField] Collider pickupCollider;
 
+    // This will need removing. I was testing functionality, but continuous 
+    // sounds cannot be easily faded out without extra dependencies, so this isn't viable.
+    [SerializeField] ContinuousEffect movementWhooshing;
+
     public float EngineMaxSpeedModifier { get; set; }
     public int ConfusedCount { get; set; }
 
@@ -133,22 +137,22 @@ public class PlayerController : MonoBehaviour, IModdable
             ParticleRight.Stop();
         }
 
-        bool leftBumberDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.Q);
-        bool rightBumberDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.E);
+        bool leftBumperDown  = (Gamepad.current?.leftShoulder.ReadValue()  ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.Q);
+        bool rightBumperDown = (Gamepad.current?.rightShoulder.ReadValue() ?? 0.0f) > 0.5f || Input.GetKey(KeyCode.E);
 
         if(ConfusedCount > 0)
         {
-            bool temp = rightBumberDown;
-            rightBumberDown = leftBumberDown;
-            leftBumberDown = temp;
+            bool temp = rightBumperDown;
+            rightBumperDown = leftBumperDown;
+            leftBumperDown = temp;
         }
 
-        if (leftBumberDown)
+        if (leftBumperDown)
         {
             leftResourceWheel.Activate();
             rightResourceWheel.Deactivate();
         }
-        else if (rightBumberDown)
+        else if (rightBumperDown)
         {
             rightResourceWheel.Activate();
             leftResourceWheel.Deactivate();
@@ -236,14 +240,20 @@ public class PlayerController : MonoBehaviour, IModdable
 
         if (engineInput > 0.0f)
         {
+            movementWhooshing.Play();
             forklift.Engine.Power = Math.Clamp(forklift.Engine.Power,
                 0.0f,
                 enginePowerMaxCurve.Evaluate(engineAccelerationTimer.position) * engineMaxPowerSpring.position * EngineMaxSpeedModifier);
         }
         else if (engineInput < 0.0f)
         {
+            movementWhooshing.Play();
             forklift.Engine.Power = Math.Max(forklift.Engine.Power,
                 0.0f);
+        }
+        else
+        {
+            movementWhooshing.Stop();
         }
 
         forklift.Engine.Resistance = engineFrictionCurve.Evaluate(EnginePowerRatio);
